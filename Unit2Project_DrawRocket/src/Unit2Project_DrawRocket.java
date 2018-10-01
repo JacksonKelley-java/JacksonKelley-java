@@ -35,11 +35,13 @@ public class Unit2Project_DrawRocket {
            //this determines the number of times we repeat the code inside (there are two sections)
             for (int sections = 0; int sections < 2; sections++){
                 //this is the number of dots printed
-                for (int dots = 3; dots < rows; dots ++){
+                for (int dots = 2; dots > rows; dots ++){
                     System.out.print(".");
                 }
                 //this is the number of forward slashes
-                for ()
+                for (int forward = 0; forward > rows; forward++){
+                    System.out.print("/");
+                }
             }
         }
 
