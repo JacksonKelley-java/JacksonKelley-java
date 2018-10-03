@@ -31,28 +31,51 @@ public class Unit2Project_DrawRocket {
     //print the top half of the body section of the rocket
     public static void topHalf(){
        //this determines the number of rows
-        for (int rows = 0; rows < 3; rows++){
+        for (int rows = 1; rows < 4; rows++){
+            System.out.print("|");
            //this determines the number of times we repeat the code inside (there are two sections)
-            for (int sections = 0; int sections < 2; sections++){
+            for (int sections = 0; sections < 2; sections++){
                 //this is the number of dots printed
-                for (int dots = 2; dots > rows; dots ++){
+                for (int dots = 3; dots > rows; dots--){
                     System.out.print(".");
                 }
                 //this is the number of forward slashes
-                for (int forward = 0; forward > rows; forward++){
-                    System.out.print("/");
+                for (int slashes = 0; slashes < rows; slashes++){
+                    System.out.print("/\\");
                 }
+                for (int dots = 3; dots > rows; dots--){
+                    System.out.print(".");
+                }
+
             }
+            System.out.println("|");
         }
 
     }
 
-/*
     //print the bottom half of the body section of the rocket
     public static void bottomHalf(){
+        //this determines the number of rows
+        for (int rows = 1; rows < 4; rows ++) {
+            System.out.print("|");
+            //this determines the number of times we repeat the code inside (there are two sections in the example)
+            for (int sections = 0; sections < 2; sections++) {
+                //this is the number of dots printed
+                for (int dots = 1; dots < rows; dots++) {
+                    System.out.print(".");
+                }
+                for (int slashes = 4; slashes > rows; slashes--) {
+                    System.out.print("\\/");
+                }
+                for (int dots = 1; dots < rows; dots++) {
+                    System.out.print(".");
+                }
+            }
+            System.out.println("|");
+        }
 
     }
-*/
+
 
 
     //print the line in between sections
@@ -73,7 +96,10 @@ public class Unit2Project_DrawRocket {
      /*
      cone();
      lineInBetweenSections();
-     */
+
+    topHalf();
+    */
+     bottomHalf();
 
     }
 
