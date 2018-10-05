@@ -1,11 +1,12 @@
 public class Unit2Project_DrawRocket {
 
-    //class constant will go here later
+    //class constant will go here
+    public static final int SIZE = 8;
 
     //print the cone section
     public static void cone(){
         //number of rows of the row
-        for (int rows = 0; rows < 5; rows++){
+        for (int rows = 0; rows < (SIZE - 2); rows++){
             //this prints the number of spaces before the front of the cone
             for (int spaces = 5; spaces > rows; spaces--){
                 System.out.print(" ");
@@ -31,19 +32,19 @@ public class Unit2Project_DrawRocket {
     //print the top half of the body section of the rocket
     public static void topHalf(){
        //this determines the number of rows
-        for (int rows = 1; rows < 4; rows++){
+        for (int rows = 0; rows < (SIZE/2 -1); rows++){
             System.out.print("|");
            //this determines the number of times we repeat the code inside (there are two sections)
             for (int sections = 0; sections < 2; sections++){
                 //this is the number of dots printed
-                for (int dots = 3; dots > rows; dots--){
+                for (int dots = 2; dots > rows; dots--){
                     System.out.print(".");
                 }
                 //this is the number of forward slashes
-                for (int slashes = 0; slashes < rows; slashes++){
+                for (int slashes = -1; slashes < rows; slashes++){
                     System.out.print("/\\");
                 }
-                for (int dots = 3; dots > rows; dots--){
+                for (int dots = 2; dots > rows; dots--){
                     System.out.print(".");
                 }
 
@@ -56,18 +57,18 @@ public class Unit2Project_DrawRocket {
     //print the bottom half of the body section of the rocket
     public static void bottomHalf(){
         //this determines the number of rows
-        for (int rows = 1; rows < 4; rows ++) {
+        for (int rows = 0; rows < (SIZE/2 - 1); rows ++) {
             System.out.print("|");
             //this determines the number of times we repeat the code inside (there are two sections in the example)
             for (int sections = 0; sections < 2; sections++) {
                 //this is the number of dots printed
-                for (int dots = 1; dots < rows; dots++) {
+                for (int dots = 0; dots < rows; dots++) {
                     System.out.print(".");
                 }
-                for (int slashes = 4; slashes > rows; slashes--) {
+                for (int slashes = 3; slashes > rows; slashes--) {
                     System.out.print("\\/");
                 }
-                for (int dots = 1; dots < rows; dots++) {
+                for (int dots = 0; dots < rows; dots++) {
                     System.out.print(".");
                 }
             }
@@ -80,11 +81,11 @@ public class Unit2Project_DrawRocket {
 
     //print the line in between sections
     public static void lineInBetweenSections(){
-        System.out.print("+");
-        for (int equalStar = 0; equalStar < 6; equalStar++){
+        System.out.print("+"); //this prints the "+" to open the line
+        for (int equalStar = 0; equalStar < (SIZE - 2) ; equalStar++){
             System.out.print("=*");
-        }
-        System.out.println("+");
+        } //this prints the body of the line
+        System.out.println("+"); //this prints the "+" to end the line
     }
 
 
@@ -93,13 +94,16 @@ public class Unit2Project_DrawRocket {
 
     //Main method
     public static void main(String[] args) {
-     /*
+
      cone();
      lineInBetweenSections();
-
-    topHalf();
-    */
+     topHalf();
      bottomHalf();
+     lineInBetweenSections();
+     topHalf();
+     bottomHalf();
+     lineInBetweenSections();
+     cone();
 
     }
 
