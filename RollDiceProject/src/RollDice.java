@@ -31,25 +31,25 @@ public class RollDice {
             }
         }
 
-        //def dice
-        public static void defDice() {
-            System.out.println("We are in defDice!");
-        }
 
-        //printdice
-        public static void printDice() {
-            System.out.println("We are in printDice!");
         }
+    //def dice
+    public static void defDice() {
+        System.out.println("We are in defDice!");
+    }
 
-        //roll dice
-        public static void rollDice() {
-            System.out.println("We are in rollDice!");
-        }
+    //printdice
+    public static void printDice() {
+        System.out.println("We are in printDice!");
+    }
 
-        //draw line, wihch prints and returns
-        public static void drawLine() {
-            System.out.println("We are in drawLine!");
-        }
+    //roll dice
+    public static void rollDice() {
+        System.out.println("We are in rollDice!");
+    }
 
+    //draw line, wihch prints and returns
+    public static void drawLine() {
+        System.out.println("We are in drawLine!");
     }
 }
