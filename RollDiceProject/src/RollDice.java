@@ -5,12 +5,15 @@ import java.util.Random;
 public class RollDice {
     public static int DICENUM = 1;
     public static void main(String[] args) {
-        String playAgain = "y";
+        String playAgain;
         //while loop begins
 
         defDice();
 
+        System.out.println("Would you like to play? y/n");
+
         Scanner userInput = new Scanner(System.in);
+        playAgain = userInput.next();
 
         while(playAgain.equals("y")) {
 
@@ -20,22 +23,33 @@ public class RollDice {
 
             drawLine();
 
+            printDice();
+
             //here to the end of the while loop is ending the while loop
             System.out.println("Play again? y/n");
-            userInput = playAgain;
-            if (playAgain = "n") {
-                System.out.println("Thanks for playing!");
-            }
-            if ((playAgain != "y") && (playAgain != "n")) {
-                System.out.println("That input was not valid. Thanks for playing!");
+
+            playAgain = userInput.next();
+
             }
         }
 
 
-        }
     //def dice
     public static void defDice() {
         System.out.println("We are in defDice!");
+
+        String dice[][]= new String[6][5];
+
+        String topAndBottom = " ------- ";
+        String blank ="|      |";
+        String oneStar = "|   *   |";
+        String twoStars ="| *   * |";
+        String upperLeft = "| *     |";
+        String bottomRight = "|     * |";
+
+        for(int i = 0; i <= dice.length-1; i++){
+            
+        }
     }
 
     //printdice
