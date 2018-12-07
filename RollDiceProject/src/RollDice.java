@@ -4,6 +4,7 @@ import java.util.Random;
 
 //this should be edited
 //try again
+//edit 3
 
 public class RollDice {
     public static int DICENUM = 1;
