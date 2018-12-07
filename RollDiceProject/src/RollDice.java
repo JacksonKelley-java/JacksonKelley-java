@@ -2,6 +2,9 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
 
+//this should be edited
+//try again
+
 public class RollDice {
     public static int DICENUM = 1;
     public static void main(String[] args) {
