@@ -48,7 +48,7 @@ public class RollDice {
         String bottomRight = "|     * |";
 
         for(int i = 0; i <= dice.length-1; i++){
-            
+
         }
     }
 
