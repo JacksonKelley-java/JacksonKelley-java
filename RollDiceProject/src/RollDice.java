@@ -2,17 +2,18 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
 
-//this should be edited
-//try again
-//edit 3
+/*
+Jackson kelley
+Mrs. Transue
+AP CS A
+Roll Dice Project
+12/8/18
+ */
 
 public class RollDice {
     public static int DICENUM = 1;
     public static void main(String[] args) {
         String playAgain;
-        //while loop begins
-
-        defDice();
 
         System.out.println("Would you like to play? y/n");
 
@@ -21,13 +22,10 @@ public class RollDice {
 
         while(playAgain.equals("y")) {
 
-            System.out.println("Rolling die!");
-
-            rollDice();
-
+            for (int i = 0; i < DICENUM; i++) {
+                printDice();
+            }
             drawLine();
-
-            printDice();
 
             //here to the end of the while loop is ending the while loop
             System.out.println("Play again? y/n");
@@ -39,35 +37,45 @@ public class RollDice {
 
 
     //def dice
-    public static void defDice() {
-        System.out.println("We are in defDice!");
+    public static String[][] defDice() {
 
-        String dice[][]= new String[6][5];
+        String dice[][]= new String[5][6];
 
-        String topAndBottom = " ------- ";
-        String blank ="|      |";
-        String oneStar = "|   *   |";
-        String twoStars ="| *   * |";
-        String upperLeft = "| *     |";
-        String bottomRight = "|     * |";
+        String topAndBottom[] = {" ------- "," ------- "," ------- "," ------- "," ------- "," ------- "};
+        String topMiddle[] = {"|       |", "| *     |","| *     |","| *   * |","| *   * |","| *   * |"};
+        String middleSection[] = {"|   *   |","|       |","|   *   |","|       |","|   *   |","| *   * |"};
+        String bottomMiddle[] = {"|       |","|     * |","|     * |","| *   * |","| *   * |","| *   * |"};
 
-        for(int i = 0; i <= dice.length-1; i++){
+        dice[0] = topAndBottom;
+        dice[1] = topMiddle;
+        dice[2] = middleSection;
+        dice[3] = bottomMiddle;
+        dice[4] = topAndBottom;
 
-        }
+        return (dice);
+
     }
 
     //printdice
     public static void printDice() {
-        System.out.println("We are in printDice!");
+        String dice[][] = defDice();
+        int roll = rollDice();
+        System.out.println(roll);
+        for(int i = 0; i < 5; i++) {
+            System.out.println(dice[i][roll-1]);
+        }
     }
 
     //roll dice
-    public static void rollDice() {
-        System.out.println("We are in rollDice!");
+    public static int rollDice() {
+        Random rollDie = new Random();
+        int result = rollDie.nextInt (6) +1;
+        return result;
+
     }
 
     //draw line, wihch prints and returns
     public static void drawLine() {
-        System.out.println("We are in drawLine!");
+        System.out.println("------------");
     }
 }
